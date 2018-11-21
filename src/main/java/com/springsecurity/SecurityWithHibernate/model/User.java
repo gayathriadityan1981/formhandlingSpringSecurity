@@ -2,14 +2,14 @@ package com.springsecurity.SecurityWithHibernate.model;
 
 import javax.persistence.*;
 @Entity
-@Table(name="user")
+@Table(name="users")
 public class User{
     private String username;
     private String password;
     private boolean enabled;
 
     @Id
-    @Column(name="Username",length=36,nullable=false)
+    @Column(name="username",length=36,nullable=false)
     public String getUsername(){
         return username;
     }
@@ -19,7 +19,7 @@ public class User{
         this.username=username;
     }
     
-    @Column(name="Password",nullable=false)
+    @Column(name="password",nullable=false)
     public String getPassword(){
         return password;
     }
@@ -29,7 +29,7 @@ public class User{
         this.username=username;
     }
     
-    @Column(name="Enabled",nullable=false)
+    @Column(name="enabled",nullable=false)
     public boolean isEnabled(){
         return enabled;
     }
