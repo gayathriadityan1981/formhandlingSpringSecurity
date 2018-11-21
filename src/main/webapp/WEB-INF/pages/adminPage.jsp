@@ -13,6 +13,12 @@
  
     <h3>Welcome : ${pageContext.request.userPrincipal.name}</h3>
  
-    <b>This is protected page!</b>  
+   <ul>
+   <li>View Invoices</li>
+   <li>View Reports</li>
+   <li>View Orders</li>
+  
+   </ul>
+
 </body>
 </html>
