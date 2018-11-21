@@ -37,7 +37,7 @@ public class UserInfoDao{
     }
  
     public List<String> getUserRoles(String userName) {
-        String sql = "Select r.userRole "//
+        String sql = "Select r.roleName "//
                 + " from " + UserRole.class.getName() + " r where r.user.username = :username ";
  
         Session session = sessionFactory.getCurrentSession();
@@ -45,9 +45,11 @@ public class UserInfoDao{
         Query query = session.createQuery(sql);
         query.setParameter("username", userName);
          
-        List<String> roles = null;
-       
- 
+        List<String> roles = query.getResultList();
+       for(String row:roles )
+        {
+                roles.add(row.toString());
+        }
         return roles;
     }
 }
