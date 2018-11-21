@@ -2,15 +2,15 @@ package com.springsecurity.SecurityWithHibernate.model;
 
 import javax.persistence.*;
 @Entity
-@Table(name="user_roles")
+@Table(name="userroles")
 public class UserRole{
     private String roleId;
-    private String userRole;
+    private String roleName;
     private User user;
    
 
     @Id
-    @Column(name="RoleId",nullable=false)
+    @Column(name="roleId",nullable=false)
     public String getRoleId(){
         return roleId;
     }
@@ -20,17 +20,17 @@ public class UserRole{
         this.roleId=roleId;
     }
     
-    @Column(name="UserRole",nullable=false)
+    @Column(name="roleName",nullable=false)
     public String getRoleName(){
-        return userRole;
+        return roleName;
     }
 
-    public void setRoleName(String userRole)
+    public void setRoleName(String roleName)
     {
-        this.userRole=userRole;
+        this.roleName=roleName;
     }
    @ManyToOne(fetch=FetchType.LAZY)
-   @JoinColumn(name="Username")
+   @JoinColumn(name="username")
    public User getUser(){
        return user;
    }
