@@ -12,6 +12,12 @@
  
     <h3>Welcome : ${pageContext.request.userPrincipal.name}</h3>
  
-    <b>This is protected page!</b>  
+    <ul>
+        <li>View Menu</li>
+        <li>Order Food</li>
+        <li>View Cart</li>
+       
+        </ul>
+     
 </body>
 </html>
